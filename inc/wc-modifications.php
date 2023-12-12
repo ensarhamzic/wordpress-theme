@@ -6,7 +6,7 @@
  *
  * @package Fancy Lab
  */
- 
+
 function fancy_lab_wc_modify(){
 	/** 
 	* Modify WooCommerce opening and closing HTML tags
@@ -42,7 +42,7 @@ function fancy_lab_wc_modify(){
 		function fancy_lab_close_sidebar_tags(){
 			echo '</div>';
 		}
-
+		// Also, if we are on a shop page, include the product description
 		add_action( 'woocommerce_after_shop_loop_item_title', 'the_excerpt', 1 );		
 	}
 
@@ -55,9 +55,7 @@ function fancy_lab_wc_modify(){
 		} else{
 			echo '<div class="col">';
 		}
-		
 	}
-
 	add_action( 'woocommerce_after_main_content', 'fancy_lab_close_shop_tags', 4 );
 	function fancy_lab_close_shop_tags(){
 		echo '</div>';

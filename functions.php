@@ -18,6 +18,7 @@ function fancy_lab_scripts(){
 
  	// Theme's main stylesheet
  	wp_enqueue_style( 'fancy-lab-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css' ), 'all' );
+
  }
  add_action( 'wp_enqueue_scripts', 'fancy_lab_scripts' );
 
@@ -61,6 +62,10 @@ function fancy_lab_config(){
 }
 add_action( 'after_setup_theme', 'fancy_lab_config', 0 );
 
+/**
+ * If WooCommerce is active, we want to enqueue a file
+ * with a couple of template overrides
+ */
 if( class_exists( 'WooCommerce' )){
 	require get_template_directory() . '/inc/wc-modifications.php';
 }
