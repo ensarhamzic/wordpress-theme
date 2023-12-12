@@ -19,6 +19,8 @@ function fancy_lab_scripts(){
  	// Theme's main stylesheet
  	wp_enqueue_style( 'fancy-lab-style', get_stylesheet_uri(), array(), filemtime( get_template_directory() . '/style.css' ), 'all' );
 
+ 	// Google Fonts
+ 	// wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700|https://fonts.googleapis.com/css?family=Seaweed+Script' );
  }
  add_action( 'wp_enqueue_scripts', 'fancy_lab_scripts' );
 
