@@ -12,6 +12,11 @@
 require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 /**
+* Customizer additions.
+*/
+require_once get_template_directory() . '/inc/customizer.php';
+
+/**
 * Enqueue scripts and styles.
 */
 function fancy_lab_scripts(){
@@ -61,6 +66,11 @@ function fancy_lab_config(){
 		add_theme_support( 'wc-product-gallery-lightbox' );
 		add_theme_support( 'wc-product-gallery-slider' );
 
+        /**
+        * Add support for core custom logo.
+        *
+        * @link https://codex.wordpress.org/Theme_Logo
+        */
 		add_theme_support( 'custom-logo', array(
 			'height' 		=> 85,
 			'width'			=> 160,
