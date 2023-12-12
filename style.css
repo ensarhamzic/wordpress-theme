@@ -94,6 +94,7 @@ header p.site-title ~ span {
 header .brand {
   padding-bottom: 15px;
   word-break: break-word;
+  word-wrap: break-word;
   -ms-word-wrap: break-word;
 }
 
@@ -1020,9 +1021,6 @@ li.comment {
 
 .entry-pings .reply {
   display: none;
-}
-
-.bypostauthor {
 }
 
 .form-allowed-tags {
