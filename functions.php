@@ -38,6 +38,7 @@ function fancy_lab_config(){
 			)
 		);
 
+		// This theme is WooCommerce compatible, so we're adding support to WooCommerce
 		add_theme_support( 'woocommerce', array(
 			'thumbnail_image_width' => 255,
 			'single_image_width'	=> 255,
@@ -58,5 +59,8 @@ function fancy_lab_config(){
 			$content_width = 600;
 		}				
 }
-
 add_action( 'after_setup_theme', 'fancy_lab_config', 0 );
+
+if( class_exists( 'WooCommerce' )){
+	require get_template_directory() . '/inc/wc-modifications.php';
+}
